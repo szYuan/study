@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>4-自定义事件</title>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/backbone.js/1.2.3/backbone-min.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+	var M=Backbone.Model.extend({
+		defaults:{
+			name:'Hello'
+		},
+		initialize:function(){//初始化构造函数
+			// this.on('change',function(){
+			this.on('change:name',function(){
+				alert('change');
+			});
+		}
+	});
+	
+	var oM=new M;
+	oM.set('name','Hi');
+	oM.set('hehe','He');
+
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getInstance</title>
+</head>
+<body>
+	<script>
+	var Singleton=function(name){
+		this.name=name;
+	}
+	Singleton.prototype.getName=function(){
+		alert(this.name);
+	}
+	Singleton.getInstance=(function(name){
+		var instance = null;
+		return function(name){
+			if(!instance){
+				instance=new Singleton(name);
+			}
+			return instance;
+		}
+	})();
+
+	var a=Singleton.getInstance('obj1');
+	var b=Singleton.getInstance('obj2');
+
+	alert(a==b);
+	</script>
+</body>
+</html>

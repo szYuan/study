@@ -1,0 +1,24 @@
+{
+  "name": "mooc",
+  "description": "study bower 1",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "szy"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "2012050501102859": "http://image.tupian114.com/20120505/2012050501102859.jpg",
+    "jquery": "~2.2.0",
+    "sHover": "szYuan/sHover"
+  }
+}

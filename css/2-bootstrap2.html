@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-bootstrap</title>
+	<link rel="stylesheet" href="all/bootstrap2.css">
+	<style>
+		.row{
+			height: 60px;
+			background: #eee;
+		}
+		.row>div{
+			background: #ddd;	
+		}
+		.row-fluid{
+			height: 60px;
+			background: #eee;
+		}
+		.row-fluid>div{
+			background: #ddd;
+		}
+		.clear{clear: both;}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row-fluid">
+		    <div class="span3"><p>span3</p></div>
+		    <div class="span3"><p>span3</p></div>
+		    <div class="span3"><p>span3</p></div>
+		    <div class="span3"><p>span3</p></div>
+		</div>
+	</div>
+	<div class="clear"></div>
+
+	<div class="container-fluid">
+		<div class="row-fluid">
+		    <div class="span4">
+			    <div class="span4"><p>span4</p></div>
+			    <div class="span4"><p>span4</p></div>
+			    <div class="span4"><p>span4</p></div>
+		    </div>
+		    <div class="span4"><p>span4</p></div>
+		    <div class="span4"><p>span4</p></div>
+		</div>
+	</div>
+</body>
+</html>

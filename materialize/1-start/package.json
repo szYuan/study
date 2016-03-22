@@ -1,0 +1,14 @@
+{
+  "name": "1-start",
+  "version": "1.0.0",
+  "description": "my first materialize study workplace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "materialize"
+  ],
+  "author": "szy",
+  "license": "ISC"
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>2-模型拓展添加方法</title>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/backbone.js/1.2.3/backbone-min.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+	var M=Backbone.Model.extend({
+		aaa:function(){//实例方法
+			alert('oM.aaa()-实例方法');
+		}
+	},{
+		bbb:function(){//静态方法
+			alert('M.bbb()-静态方法');
+		}
+	});
+	
+	var oM=new M;
+	oM.aaa();//实例方法
+	M.bbb();//静态方法
+	// oM.bbb(); //not a function
+
+</script>
+</html>

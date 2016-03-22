@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件委托</title>
+</head>
+<body>
+	<input type="button" value="1">
+	<ul>
+		<li>111</li>
+		<li>222</li>
+		<li>333</li>
+		<li>444</li>
+	</ul>
+</body>
+<script src="../src/underscore-min.js"></script>
+<script src="../src/jquery-2.2.0.js"></script>
+<script src="../src/backbone.js"></script>
+<script>
+	$(function(){
+		var v=Backbone.View.extend({
+			el:$('body'),//触发委托人
+			events:{
+				'click input[type=button]':'aaa',	//'事件 元素':'调用方法'
+				'mouseover li':'bbb'
+			},
+			aaa:function(){
+				alert(123);
+			},
+			bbb:function(){
+				alert(456);
+			}
+		});
+
+		var view=new v();
+	});
+</script>
+</html>

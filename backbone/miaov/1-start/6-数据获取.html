@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>5-模型与视图的联系</title>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/backbone.js/1.2.3/backbone-min.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+//覆盖默认ajax同步方式
+Backbone.sync=function(method,model){
+	//method 共有四个操作——增 删 改 查
+	alert(method+':'+JSON.stringify(model));
+}
+
+	var C=Backbone.Collection.extend({
+		initialize:function(){
+			this.on('reset',function(){
+				alert('reset');
+			});
+		},
+		url:'/users'
+	});
+
+	var models=new C;
+	models.fetch();
+
+</script>
+</html>

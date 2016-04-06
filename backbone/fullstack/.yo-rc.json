@@ -1,0 +1,11 @@
+{
+  "generator-fullstack-backbone": {
+    "appName": "Fullstack",
+    "entryIndex": "index.html",
+    "serverRouteName": "api",
+    "includeSequelize": false,
+    "includeRequireJS": false,
+    "includeModernizr": false,
+    "cssUILib": "sassMaterialize"
+  }
+}
